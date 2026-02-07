@@ -3,9 +3,6 @@
 </p>
 
 
-<p align="center">
-  <img src="https://github.com/mousxtache-stack/mousxtache-stack/blob/output/github-contribution-grid-snake-dark.svg" alt="Snake animation">
-</p>
 
 ---
 
