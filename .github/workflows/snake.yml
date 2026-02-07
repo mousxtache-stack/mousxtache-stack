@@ -1,0 +1,18 @@
+name: generate animation
+
+on:
+  schedule: # s'exécute toutes les 12 heures
+    - cron: "0 */12 * * *" 
+  workflow_dispatch: # permet de lancer manuellement
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: generate-snake-game-from-github-contribution-grid
+        uses: platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%23ffffff&color_dots=%23161b22,%2330363d,%23484f58,%236e7681,%23b1bac4
